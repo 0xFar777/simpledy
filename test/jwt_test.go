@@ -13,13 +13,17 @@ import (
 //	Name:     "zhangsan",
 //	Password: "12345678",
 //}
-var user = model.User{
-	Model: gorm.Model{ID: 1},
-	Name:  "zhangsan",
+var testUser = model.User{
+	Model:    gorm.Model{ID: 1},
+	Username: "zhangsan",
 }
 
 func TestCreateToken(t *testing.T) {
+<<<<<<< HEAD
+	tokenString, err := utils.CreateToken(testUser)
+=======
 	tokenString, err := utils.CreateToken(user)
+>>>>>>> main
 	if err != nil {
 		panic(err)
 	}
@@ -27,7 +31,11 @@ func TestCreateToken(t *testing.T) {
 }
 
 func TestParseToken(t *testing.T) {
+<<<<<<< HEAD
+	tokenString, err := utils.CreateToken(testUser)
+=======
 	tokenString, err := utils.CreateToken(user)
+>>>>>>> main
 	if err != nil {
 		panic(err)
 	}
